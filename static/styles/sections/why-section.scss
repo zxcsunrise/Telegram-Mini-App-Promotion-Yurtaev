@@ -1,0 +1,99 @@
+.why-section {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .why-block {
+        background-color: $bg-inverse-tp-4;
+        border-radius: $large;
+        .container {
+            display: flex;
+            gap: 4rem;
+            margin: 0 3rem 0 6rem;
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+            }
+            .img {
+                max-width: 49rem;
+                overflow: hidden;
+                @media screen and (max-width: 768px) {
+                    height: 34.667rem;
+                }
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    scale: 1.45;
+                    top: 9.5%;
+                    left: -1%;
+                    object-fit: cover;
+                    @media screen and (max-width: 768px) {
+                        top: -10%;
+                        scale: 1.4;
+                    }
+                }
+            }
+            .info-block {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                margin: 7rem 0;
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                    padding: 2rem;
+                    gap: 2rem;
+                }
+                .title {
+                    @include h1;
+                }
+                .points {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem;
+                    padding-bottom: 3rem;
+                    border-bottom: 0.063rem $bg-inverse-tp-4 solid;
+                    @media screen and (max-width: 768px) {
+                        gap: 1rem;
+                        padding-bottom: 2rem;
+                    }
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        .count {
+                            @include s1;
+                            background-color: $bg-accent-tp-8;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $text-accent;
+                            width: 42px;
+                            height: 42px;
+                            border-radius: $full;
+                            @media screen and (max-width: 768px) {
+                                max-width: 2.5rem;
+                                max-height: 2.5rem;
+                                width: 100%;
+                            }
+                        }
+                        .text {
+                            @include t1;
+                        }
+                    }   
+                }
+                .desc {
+                    display: flex;
+                    gap: 1.25rem;
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                    }
+                    .item {
+                        @include t2;
+                        color: $text-primary-tp-48;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.how-section {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .how-block {
+        background-color: $bg-inverse-tp-4;
+        border-radius: $large;
+        padding: 6rem 0;
+        @include df_fdc;
+        gap: 6rem;
+        @media screen and (max-width: 768px) {
+            padding: 2rem 0 0 0;
+        }
+        .top {
+            .container {
+                margin: 0 14.5rem;
+                @include df_fdc;
+                gap: 4rem;
+                align-items: center;
+                @media screen and (max-width: 768px) {
+                    margin: 0 2rem;
+                    gap: 2.667rem;
+                }
+                .info-block {
+                    @include df_fdc;
+                    gap: 3rem;
+                    align-items: center;
+                    flex-direction: column;
+                    @media screen and (max-width: 768px) {
+                        align-items: start;
+                        gap: 2rem;
+                    }
+                    .title {
+                        @include h1;
+                    }
+                    .card-holder {
+                        display: grid;
+                        gap: 1rem;
+                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                        .card {
+                            background-color: $bg-primary;
+                            padding: 2rem;
+                            border-radius: $basic;
+                            gap: .75rem;
+                            @include df_fdc;
+                            @media screen and (max-width: 768px) {
+                                grid-column: span 3;
+                                gap: 1rem;
+                            }
+                            
+                            .title {
+                                @include h2;
+                                line-height: 2.2rem;
+                                font-weight: 500;
+                            }
+                            .text {
+                                @include t2;
+                                letter-spacing: -0.04rem;
+                            }
+                        }
+                    }
+                }
+                .desc {
+                    @include sh;
+                    text-align: center;
+                    max-width: 60rem;
+                    width: 100%;
+                    color: $text-primary-tp-64;
+                    @media screen and (max-width: 768px) {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+        .bottom {
+            .container {
+                margin: 0 8.375rem;
+                @media screen and (max-width: 768px) {
+                    margin: 0 2rem 4.667rem 2rem;
+                }
+                .img {
+                    max-width: 101.25rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                    &.mobile {
+                        display: none;
+                        @media screen and (max-width: 768px) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

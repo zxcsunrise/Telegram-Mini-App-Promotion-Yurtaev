@@ -1,0 +1,114 @@
+.slider-section {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .slider-block {
+        padding: 4rem 4rem 0 4rem;
+        background-color: $bg-inverse-tp-4;
+        border-radius: $large;
+        @media screen and (max-width: 768px) {
+            padding: 2rem 2rem 0 2rem;
+        }
+        .container {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        margin-top: 2.3rem;
+                        @include df_fdc;
+                        align-items: center;
+                        gap: 2rem;
+                        max-height: 59rem;
+                        .title {
+                            @include h1;
+                        }
+                        .img-mobile {
+                            display: none;
+                        }
+                        @media screen and (max-width: 768px) {
+                            margin-bottom: 11rem;
+                            .img {
+                                display: none;
+                            }
+                            .img-mobile {
+                                display: block;
+                                width: 25.917rem;
+                                height: 60.167rem;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                            max-height: none;
+                        }
+                    }
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                    max-width: 2rem;
+                    max-height: 2rem;
+                    width: 100%;
+                    opacity: 1;
+                    padding: 2rem;
+                    background-color: $bg-primary;
+                    border-radius: $full;
+                    top: 44%;
+                    @media screen and (max-width: 768px) {
+                       display: none;
+                    }
+                    &.swiper-button-disabled {
+                        background: none;
+                        outline: 0.063rem solid $bg-inverse-tp-8;
+                        svg {
+                            path {
+                                transition: .3s ease-in-out;
+                                fill: $icon-primary-tp-24;
+                            }
+                        }
+                    }
+                    svg {
+                        path {
+                            transition: .3s ease-in-out;
+                            fill: $icon-primary-tp-32;
+                        }
+                    }
+                    &::after {
+                        font-size: 0;
+                    }
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $icon-primary-tp-48;
+                            }
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    top: 0;
+                    bottom: 0;
+                    height: fit-content;
+                    .swiper-pagination-bullet {
+                        background: $bg-inverse-tp-8;
+                        width: 6.25rem;
+                        height: 0.375rem;
+                        border-radius: $full;
+                        margin: 0 .25rem 0 0;
+                        padding: 0;
+                        &:last-child {
+                            margin-left: 0;
+                        }
+                        &.swiper-pagination-bullet-active {
+                            background: $bg-inverse-tp-32;
+                        }
+                        @media screen and (max-width: 768px) {
+                            height: .5rem;
+                            width: 6.2rem;
+                            margin: 0 0.167rem 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

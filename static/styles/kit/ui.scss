@@ -1,0 +1,202 @@
+$font: 'Graphik LCG';
+
+body {
+    font-family: $font, sans-serif;
+}
+
+
+
+$bg-primary: #FFFFFF;
+$bg-inverse: #212121;
+$bg-accent: #2196F3;
+$bg-system-pos: #4CAF50;
+$bg-system-neg: #F44336;
+$bg-primary-tp-16: rgba(255, 255, 255, 0.16);
+$bg-primary-tp-8: rgba(255, 255, 255, 0.08);
+$bg-accent-tp-8: rgba(33, 150, 243, 0.08);
+$bg-inverse-tp-48: rgba(33, 33, 33, 0.48);
+$bg-inverse-tp-32: rgba(33, 33, 33, 0.32);
+$bg-inverse-tp-8: rgba(33, 33, 33, 0.08);
+$bg-inverse-tp-4: rgba(33, 33, 33, 0.04);
+
+$text-primary: #212121;
+$text-inverse: #FFFFFF;
+$text-accent: #2196F3;
+$text-system-pos: #4CAF50;
+$text-system-neg: #F44336;
+$text-primary-tp-64: rgba(33, 33, 33, 0.64);
+$text-primary-tp-48: rgba(33, 33, 33, 0.48);
+$text-primary-tp-24: rgba(33, 33, 33, 0.24);
+$text-inverse-tp-64: rgba(255, 255, 255, 0.64);
+$text-inverse-tp-32: rgba(255, 255, 255, 0.32);
+
+$icon-primary-tp-48: rgba(33, 33, 33, 0.48);
+$icon-primary-tp-32: rgba(33, 33, 33, 0.32);
+$icon-primary-tp-24: rgba(33, 33, 33, 0.24);
+
+$micro: 0.25rem;
+$small: 0.5rem;
+$basic: 1rem;
+$large: 2rem;
+$full: 100rem;
+@mixin h0 {
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 6rem;
+    letter-spacing: -0.15rem;
+    @media screen and (max-width: 768px) {
+        font-size: 4rem;  
+        line-height: 4rem;  
+    }
+}
+@mixin h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    letter-spacing: -.15rem;
+    @media screen and (max-width: 768px) {
+        font-size: 2.667rem;
+        line-height: 2.933rem;
+    }
+}
+@mixin h2_s {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    letter-spacing: -3%;
+}
+@mixin h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    letter-spacing: -0.05rem;
+}
+@mixin sh_s {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 2.45rem;
+    letter-spacing: -3%;
+    @media screen and (max-width: 768px) {
+        font-size: 1.667rem;
+    }
+}
+@mixin sh {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 2.45rem;
+    letter-spacing: -0.05rem;
+    @media screen and (max-width: 768px) {
+        font-size: 1.667rem;
+    }
+}
+@mixin s1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.1rem;
+    letter-spacing: -3%;
+    @media screen and (max-width: 768px) {
+        font-size: 1.333rem;
+    }
+}
+@mixin t1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: -.05rem;
+    @media screen and (max-width: 768px) {
+        font-size: 1.333rem;
+        line-height: 1.867rem;
+    }
+}
+@mixin s2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: -3%;
+    @media screen and (max-width: 768px) {
+        font-size: 1.167rem;
+    }
+}
+@mixin t2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing:-0.025rem;
+    @media screen and (max-width: 768px) {
+        font-size: 1.167rem;
+    }
+}
+@mixin t3 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    letter-spacing: -3%;
+}
+@mixin df_fdc {
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100rem;
+    transition: .3s ease-in-out;
+    &.basic {
+        padding: 1.25rem 2rem;
+        @include s2;
+        &.outlined {
+            border: 0.063rem solid $bg-accent;
+            color: $text-accent;
+            &.btn-mobile {
+                padding: 1.167rem 2rem;
+            }
+            &:hover {
+                background-color: $bg-accent;
+                color: $text-inverse;
+               
+            }
+        }
+        &.accent {
+            background-color: $bg-accent;
+            color: $text-inverse;
+            &:hover {
+                background-color: $bg-inverse;
+            }
+            
+        }
+    }
+    &.large {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        &.accent {
+            background-color: $bg-inverse;
+            color: $text-inverse;
+            @include sh;
+            align-self: stretch;
+            &:hover {
+                background-color: $bg-inverse-tp-48;
+            }
+        }
+    }
+}
+.error {
+    outline: 0.063rem solid  $bg-system-neg;
+}
+input {
+    background-color: $bg-primary;
+    border-radius: $full;
+    display: flex;
+    padding: 2rem 0 2rem 3rem;
+    @include sh;
+    border: 0;
+    outline: 0;
+    color: $text-primary;
+    &::placeholder {
+        color: $text-primary-tp-24;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 2rem 0 2rem 2.667rem;
+    }
+}

@@ -1,0 +1,86 @@
+.advantages-section {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .advantages-block {
+        background-color: $bg-inverse-tp-4;
+        padding: 6rem 0;
+        border-radius: $large;
+        position: relative;
+        overflow: hidden;
+        
+        @media screen and (max-width: 768px) {
+            padding: 2rem 0 0 0;
+        }
+        .container {
+            margin: 0 6rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 3rem;
+            @media screen and (max-width: 768px) {
+                display: block;  
+                margin: 0 0 0rem 2rem;
+            }
+            .item {
+                @include df_fdc;
+                gap: 2rem;
+                align-items: center;
+                @media screen and (max-width: 768px) {
+                    display: none;  
+                }
+                .img {
+                    max-width: 15rem;
+                    @media screen and (max-width: 768px) {
+                        max-width: 10rem;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain
+                    }
+                }
+                .text {
+                    @include t1;
+                    text-align: center;
+                    color: $text-primary;
+                    span {
+                    color: $text-primary-tp-48;
+                       margin: 0;
+                       padding: 0;
+                    }
+                }
+            }
+            .advantageSwiper {
+                display: none;
+                @media screen and (max-width: 768px) {
+                    display: block;
+                }
+                .swiper-wrapper {
+                    padding-bottom: 2rem;
+                    .swiper-slide {               
+                        .item {
+                            @media screen and (max-width: 768px) {
+                                display: flex;
+                                width: 16.667rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-scrollbar {
+            background: none;
+            height: .5rem;
+            margin: 0 0 1rem 1rem;
+            display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                    }
+            .swiper-scrollbar-drag {
+                background-color: $bg-inverse-tp-8;
+                
+            }
+        }
+    }
+}

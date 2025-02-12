@@ -1,0 +1,137 @@
+.red-section {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .red-block {
+        .container {
+            display: flex;
+            gap: 1rem;
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+            .left {
+                background-color: $bg-inverse-tp-4;
+                border-radius: $large;
+                padding: 4rem 10.375rem 4rem 4rem;
+                @include df_fdc;
+                justify-content: space-between;
+                @media screen and (max-width: 768px) {
+                    gap: 6rem ;
+                    padding: 2rem;
+                }
+                .info-block {
+                    @include df_fdc;
+                    max-width: 22.625rem;
+                    width: 100%;
+                    gap: 2rem;
+                    @media screen and (max-width: 768px) {
+                        gap: 1.167rem;
+                        max-width: none;
+                    }
+                    .title {
+                        @include h2;
+                        font-weight: 500;
+                    }
+                    .desc {
+                        @include t2;
+                        color: $text-primary-tp-48;
+                    }
+                }
+                .logo {
+                    @media screen and (max-width: 768px) {
+                        max-width: 13.725rem;
+                        img {
+                            width: 100%;     
+                            height: 100%;
+                            object-fit: contain;                   
+                        }
+                    }
+                    
+                }
+            }
+            .right {
+                display: block;
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+                .img {
+                    max-width: 80rem;
+                    img {
+                        border-radius: $large;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .right-mobile {
+                display: none;
+                @media screen and (max-width: 768px) {
+                   display: block;
+                }
+                .rightSwiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .img {
+                                max-width: 25rem;
+                                img {
+                                    border-radius: $large;
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-button-next {
+                        left: 77%;
+                    }
+                    .swiper-button-prev {
+                        left:6%;
+                        transform: rotate(180deg);
+                        display: none;
+                    }
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        max-width: 2rem;
+                        max-height: 2rem;
+                        width: 100%;
+                        opacity: 1;
+                        padding: 1.167rem;
+                        background-color: $bg-primary;
+                        border-radius: $full;
+                        
+                        &.swiper-button-disabled {
+                            opacity: 0;
+                            transition: opacity .3s ease-in-out;
+                            svg {
+                                path {
+                                    transition: .3s ease-in-out;
+                                    fill: $icon-primary-tp-24;
+                                }
+                            }
+                        }
+                        svg {
+                            path {
+                                transition: .3s ease-in-out;
+                                fill: $icon-primary-tp-32;
+                            }
+                        }
+                        &::after {
+                            font-size: 0;
+                        }
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: $icon-primary-tp-48;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

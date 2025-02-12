@@ -1,0 +1,87 @@
+.footer {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
+        margin: 0.667rem;
+    }
+    .footer-section {
+        .footer-block {
+            background-color: $bg-accent;
+            border-radius: $large;
+            padding: 8rem;
+            @media screen and (max-width: 768px) {
+                padding: 2rem;
+            }
+            .container {
+                display: flex;
+                gap: 8rem;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 4rem;
+                }
+                .info-block {
+                    max-width: 43rem;
+                    @include df_fdc;
+                    justify-content: space-between;
+                    color: $text-inverse;
+                    @media screen and (max-width: 768px) {
+                        gap: 3rem;
+                    }
+                    .text {
+                        @include df_fdc;
+                        gap: 3rem;
+                        .title {
+                            @include h1;
+                            letter-spacing: -0.11rem;
+                        }
+                        .desc {
+                            @include t1;
+                            max-width: 26.25rem;
+                        }
+                        @media screen and (max-width: 768px) {
+                            gap: 2rem;
+                        }
+                    }
+                    .copyright {
+                        color: $text-inverse-tp-32;
+                        @include t3;
+                        background-color: none;
+                    }
+                }
+                .form {
+                    @include df_fdc;
+                    gap: 2rem;
+                    width: 100%;
+                    align-items: center;
+                    .label-form {
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        gap: 1rem;
+                        width: 100%;
+                        .phone-number,
+                        .sphere {
+                            grid-column: span 2;
+                        
+                        }
+                        input {
+                            @media screen and (max-width: 768px) {
+                                grid-column: span 2;
+                            }
+                        }
+                    }
+                    .submit {
+                        display: flex;
+                        max-width: 30rem;
+                        width: 100%;
+                        text-align: center;
+                        color: $text-inverse-tp-64;
+                        @include t2;
+                        letter-spacing: -0.01rem;
+                        @media screen and (max-width: 768px) {
+                            @include t1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

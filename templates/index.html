@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini Apps</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/font/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-block">
+            <div class="container">
+                <div class="logo">
+                    <img src="../static/images/logo.svg" alt="">
+                </div>
+                <div class="logo mobile-logo">
+                    <img src="../static/images/mobile-logo.svg" alt="">
+                </div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#!">Почему Telegram?</a></li>
+                        <li><a href="#!">Наши услуги</a></li>
+                        <li><a href="#!">Преимущества</a></li>
+                        <li><a href="#!">Как это работает</a></li>
+                    </ul>
+                </nav>                   
+                <a href="#!" class="button basic outlined">Оставить заявку</a>
+                <div class="mobile-menu">
+                    <svg class="burger-menu-btn" id="toggle-button" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#212121" fill-opacity="0.32"/>
+                    </svg> 
+                    <a href="#!" class="button basic outlined btn-mobile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="#2196F3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-block">
+            <div class="container">
+                <div class="info-block">
+                    <div class="text">
+                        <h2>Треть рынка в один клик!</h2>
+                        <div class="desc">Разработайте Telegram Mini App — будущее мобильной коммерции уже здесь!</div>
+                    </div>
+                    <a href="#!" class="button basic accent">Хочу мини-приложение!</a>
+                </div>
+                <div class="video">
+                    <video autoplay muted>
+                        <source src="https://s3-figma-videos-production-sig.figma.com/video/TEAM/1351868398683487299/308171b5d94010f0aac153677f31357226d13e53?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rIP9VCOVpVd1g9qOr1N7ipqPUMEhP0rp9a4OCMexl2p6coZdVC~M6OlvvYUxbqgyKqJH6KNJXEcSMLahAR0ECnqVakj-3J9boF8DhTBalM7zqKFpNeeLRY4X5NvFrYIjuqLJ2h0zqfSLh60XlMoJATgx978YlwokSvyEUDi-qr~TlvUSJNb1NTOBQGtAHpkrjy3RMS5y191-PRn65kbHt-hLvcMYraGSY1dDH3AS--VTEUvQeLM2JG~AgrCu-4yE~Q63idog0wt5ulzKFZWhqfXixQ8n6SmkPvGuXyEiKdCSsZloC9WbJwoPNB0uSapsTdeDLQ6B6O2Q29bMBsgp8w__" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#!">Почему Telegram?</a></li>
+                <li><a href="#!">Наши услуги</a></li>
+                <li><a href="#!">Преимущества</a></li>
+                <li><a href="#!">Как это работает</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="slider-section">
+                <div class="slider-block">
+                    <div class="container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="title">Real Estate </div>
+                                <div class="img">
+                                    <img src="../static/images/slide1.png" alt="">
+                                </div>
+                                <div class="img-mobile">
+                                    <img src="../static/images/slide1-mobile.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="title">book in</div>
+                                <div class="img">
+                                    <img src="../static/images/slide2.png" alt="">
+                                </div>
+                                <div class="img-mobile">
+                                    <img src="../static/images/slide2-mobile.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="title">ONION</div>
+                                <div class="img">
+                                    <img src="../static/images/slide3.png" alt="">
+                                </div>
+                                <div class="img-mobile">
+                                    <img src="../static/images/slide3-mobile.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="title">dejavu</div>
+                                <div class="img">
+                                    <img src="../static/images/slide4.png" alt="">
+                                </div>
+                                <div class="img-mobile">
+                                    <img src="../static/images/slide4-mobile.png" alt="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5621 16.0009L10.9624 9.40124L12.848 7.51562L21.3333 16.0009L12.848 24.4861L10.9624 22.6005L17.5621 16.0009Z"/>
+                                </svg>                                    
+                            </div>
+                            <div class="swiper-button-prev">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4379 16.0009L21.0377 22.6005L19.1521 24.4861L10.6667 16.0009L19.1521 7.51562L21.0377 9.40124L14.4379 16.0009Z"/>
+                                </svg>                                    
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="advantages-section">
+                <div class="advantages-block">
+                    <div class="container">
+                        <div class="item">
+                            <div class="img">
+                                <img src="../static/images/adv-img-1.png" alt="">
+                            </div>
+                            <div class="text">
+                                Подходит для любой ниши:<span> магазины, доставка, образование, недвижимость и др.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <img src="../static/images/adv-img-2.png" alt="">
+                            </div>
+                            <div class="text">
+                                Уведомления нового поколения: <span> замените устаревшие SMS на интерактивные сообщения.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <img src="../static/images/adv-img-3.png" alt="">
+                            </div>
+                            <div class="text">
+                                Цифровизация и автоматизация: <span>управляйте продажами и коммуникацией.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img">
+                                <img src="../static/images/adv-img-4.png" alt="">
+                            </div>
+                            <div class="text">
+                                Геймификация:<span> вовлекайте клиентов через акции и розыгрыши.  </span>
+                            </div>
+                        </div>
+                        <div class="swiper advantageSwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../static/images/adv-img-1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                     Подходит для любой ниши: <span> магазины, доставка, образование, недвижимость и др.</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../static/images/adv-img-2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        Уведомления нового поколения: <span> замените устаревшие SMS на интерактивные <br>сообщения.</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../static/images/adv-img-3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        Цифровизация и автоматизация: <span>управляйте продажами и коммуникацией.</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="img">
+                                        <img src="../static/images/adv-img-4.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        Геймификация:<span> вовлекайте клиентов через акции и розыгрыши.  </span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="why-section">
+                <div class="why-block">
+                    <div class="container">
+                        <div class="img">
+                            <img src="../static/images/mobiles.png" alt="">
+                        </div>
+                        <div class="info-block">
+                            <div class="title">Почему Telegram?</div>
+                            <div class="points">
+                                <div class="item">
+                                    <div class="count">1</div>
+                                    <div class="text">Клиенту удобнее покупать в мессенджере</div>
+                                </div>
+                                <div class="item">
+                                    <div class="count">2</div>
+                                    <div class="text">Будьте ближе к клиентам — становитесь частью их повседневной жизни</div>
+                                </div>
+                                <div class="item">
+                                    <div class="count">3</div>
+                                    <div class="text">Вы рядом, как часть семьи</div>
+                                </div>
+                                <div class="item">
+                                    <div class="count">4</div>
+                                    <div class="text">Новый рынок и глобальный рост</div>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <div class="item">Telegram открывает доступ не только к российской аудитории, но и к международному рынку. </div>
+                                <div class="item">Используйте глобальный тренд, чтобы развивать свой бизнес и быть впереди конкурентов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="red-section">
+                <div class="red-block">
+                    <div class="container">
+                        <div class="left">
+                            <div class="info-block">
+                                <div class="title">30+ экспертов с опытом работы в ИИ, машинном обучении и дизайне</div>
+                                <div class="desc">Полный цикл разработки: от анализа до запуска, а также гарантия качественного пользовательского опыта</div>
+                            </div>
+                            <div class="logo">
+                                <img src="../static/images/sk-logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="img">
+                                <img src="../static/images/red-block.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-mobile">
+                            <div class="swiper rightSwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="img">
+                                        <img src="../static/images/red-slider-1.png" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img">
+                                        <img src="../static/images/red-slider-2.png" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img">
+                                        <img src="../static/images/red-slider-3.png" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" fill="#212121" fill-opacity="0.32"/>
+                                    </svg>                                                                            
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" fill="#212121" fill-opacity="0.32"/>
+                                    </svg>                                  
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="how-section">
+                <div class="how-block">
+                    <div class="top">
+                        <div class="container">
+                            <div class="info-block">
+                                <div class="title">Как это работает?</div>
+                                <div class="card-holder">
+                                    <div class="card">
+                                        <div class="title">Анализируем</div>
+                                        <div class="text">Исследуем ваш бизнес и подбираем решение</div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="title">Создаем</div>
+                                        <div class="text">Настраиваем системы для сбора клиентской информации</div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="title">Контролируем</div>
+                                        <div class="text">А вы получаете управление каждым этапом — от первого интереса клиента до покупки</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc">Вы видите все процессы в реальном времени и получаете полное понимание, как клиенты взаимодействуют с Вашим продуктом</div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="container">
+                            <div class="img">
+                                <img src="../static/images/road.png" alt="">
+                            </div>
+                            <div class="img mobile">
+                                <img src="../static/images/road-mobile.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="footer-block">
+                <div class="container">
+                    <div class="info-block">
+                        <div class="text">
+                            <div class="title">Готовы выйти на новый уровень и захватить глобальный рынок?</div>
+                            <div class="desc">Мы поможем вам стать лидером мобильной коммерции в России и за её пределами!</div>
+                        </div>
+                        <div class="copyright">&copy; Студия Сайтов 2025. Все права защищены</div>
+                    </div>
+                    <div class="form">
+                        <label for="" class="label-form">
+                            <input type="text" class="name" placeholder="Имя*">
+                            <input type="text" class="lastname" placeholder="Фамилия*">
+                            <input type="text" class="phone-number" placeholder="Номер телефона*">
+                            <input type="text" class="sphere" placeholder="Сфера бизнеса">
+                        </label>
+                        <a href="#!" class="button large accent" id="submit-btn">Отправить</a>
+                        <div class="submit">Нажимая кнопку «Отправить», Вы даете согласие на обработку персональных данных</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
